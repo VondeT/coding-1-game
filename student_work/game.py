@@ -1,4 +1,4 @@
-# Write your game here
+# Snake Game
 
 game_data = {
     # Store board dimensions, player/enemy positions, score, energy, collectibles, and icons
