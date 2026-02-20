@@ -4,6 +4,37 @@ Part I: Planning & Design (15 pts)
 * Game rules and player actions are written or sketched out
 * Main objects (player, obstacles, goals, enemies, etc.) are identified
 * Sketch a simple plan showing how the game will work step-by-step
+Snake Type Game
+
+Game Name ideas: 
+:Mouseitouille
+:Mouse Grab n Go
+:Biggie cheese
+Mouse Trap
+Game Rules:
+-Mouse traps that you must dodge in order to win
+-If you hit a mouse trap then you must restart the game
+-Grab 10 Cheese to Win the game
+-Each time Cheese is grabbed speed increases 
+-When Cheese is grabbed it is added to total
+-Click play Game Button to Start Game (Orange Yellowish Play Button)
+
+Game Design
+Mechanics
+-Randomly Spawn (Cheese and Traps)
+Mouse can Move One Tile at a Time (8x8 Grid)
+
+
+- Setting : 
+Green Background (Tiled Squares as Background)
+Characters
+Mouse(White)
+Cheese(Yellow)
+
+Steps:
+:Rules Displayed on Screen
+:After Rules are displayed hit play game button
+: 
 
 Game Idea:
 
