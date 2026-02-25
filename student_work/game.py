@@ -21,7 +21,7 @@ game_data = {
     ],
 
     # ASCII icons
-    'mouse': "1F401",
+    'mouse': "U0001F401",
     'cheese': "\U0001F343",
     'empty': "  "
 }
