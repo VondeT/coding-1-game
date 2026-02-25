@@ -21,10 +21,10 @@ game_data = {
     ],
 
     # ASCII icons
-    'turtle': "\U0001F422",
+    'mouse': "\U0001F422",
     'eagle_icon': "\U0001F985",
     'obstacle': "\U0001FAA8 ",
-    'leaf': "\U0001F343",
+    'cheese': "\U0001F343",
     'empty': "  "
 }
 
