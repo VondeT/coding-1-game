@@ -46,26 +46,31 @@ def draw_board(stdscr):
             else:
                 row += game_data['empty']
         stdscr.addstr(y, 0, row, curses.color_pair(1))
+def move_player(key):
+    x = game_data['player']['x']
+    y = game_data['player']['y']
 
-
- if key == "w" and y > 0:
-        new_y -= 1
+    new_x, new_y = x, y
+    key = key.lower()
+    if key == "w" and y > 0: 
+            new_y -= 1
     elif key == "s" and y < game_data['height'] - 1:
-        new_y += 1
+            new_y += 1
     elif key == "a" and x > 0:
-        new_x -= 1
+             new_x -= 1
     elif key == "d" and x < game_data['width'] - 1:
-        new_x += 1
+            new_x += 1
     else:
-        return 
+         return 
+
 
 
 game_data['player']['x'] = new_x
-    game_data['player']['y'] = new_y
-    game_data['player']['score'] += 1
+game_data['player']['y'] = new_y
+game_data['player']['score'] += 1
 
 
-    stdscr.refresh()
-    stdscr.getkey()  # pause so player can see board
+stdscr.refresh()
+stdscr.getkey()  # pause so player can see board
 
 curses.wrapper(draw_board)
