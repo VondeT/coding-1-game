@@ -20,12 +20,7 @@ game_data = {
     ],
 
     # ASCII icons
-<<<<<<< HEAD
     'mouse': "\U0001F401",
-=======
-    'mouse': "1F401",
-    'mouse_trap': "\U0001FAA4"
->>>>>>> d948c31 (put mouse trap in)
     'cheese': "\U0001F343",
     'empty': "  "
 }
