@@ -56,6 +56,19 @@ def draw_board(stdscr):
                 row += game_data['empty']
         stdscr.addstr(y, 0, row, curses.color_pair(1))
 
+
+ if key == "w" and y > 0:
+        new_y -= 1
+    elif key == "s" and y < game_data['height'] - 1:
+        new_y += 1
+    elif key == "a" and x > 0:
+        new_x -= 1
+    elif key == "d" and x < game_data['width'] - 1:
+        new_x += 1
+    else:
+        return 
+
+
     stdscr.refresh()
     stdscr.getkey()  # pause so player can see board
 
