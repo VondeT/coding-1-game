@@ -69,6 +69,11 @@ def draw_board(stdscr):
         return 
 
 
+game_data['player']['x'] = new_x
+    game_data['player']['y'] = new_y
+    game_data['player']['score'] += 1
+
+
     stdscr.refresh()
     stdscr.getkey()  # pause so player can see board
 
