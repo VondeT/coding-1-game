@@ -43,9 +43,6 @@ def draw_board(stdscr):
             # Player
             if x == game_data['player']['x'] and y == game_data['player']['y']:
                 row += game_data['mouse']
-            # Eagle
-            elif x == game_data['eagle_pos']['x'] and y == game_data['eagle_pos']['y']:
-                row += game_data['eagle_icon']
             # Obstacles
             elif any(o['x'] == x and o['y'] == y for o in game_data['traps']):
                 row += game_data['mouse_trap']
