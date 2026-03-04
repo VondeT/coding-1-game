@@ -104,7 +104,7 @@ def main(stdscr):
             move_player(key)
             draw_board(stdscr)
 
-def spawn_leaf():
+def spawn_cheese():
     # Limit number of leaves on board
     active_cheese = [c for c in game_data['collectibles'] if not c["collected"]]
     if len(active_cheese) >= 3:
