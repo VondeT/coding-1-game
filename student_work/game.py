@@ -75,8 +75,8 @@ def move_player(key):
         new_x += 1
     else:
         return  # Invalid key or move off board
-    if 'player'['x'] == 'cheese'['x'] and 'player'['y'] == 'cheese'['y']:
-        return 'player'['score'] + 1
+    if ['player']['x']== 'cheese' and 'player'['y'] == 'cheese':
+        return 'player'['score'] += 1
     # Check for obstacles
     if any(o['x'] == new_x and o['y'] == new_y for o in game_data['obstacles']):
         return
@@ -84,7 +84,7 @@ def move_player(key):
     # Update position and increment score
     game_data['player']['x'] = new_x
     game_data['player']['y'] = new_y
-    game_data['player']['score'] += 1
+    game_data['player']['score'] + 1
 
 def main(stdscr):
     curses.curs_set(0)
