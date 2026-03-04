@@ -21,10 +21,9 @@ game_data = {
     ],
 
     # ASCII icons
-    'turtle': "\U0001F422",
-    'eagle_icon': "\U0001F985",
+    'mouse': "\U0001F401",
     'obstacle': "\U0001FAA8 ",
-    'leaf': "\U0001F343",
+    'cheese': "\U0001F9C0",
     'empty': "  "
 }
 
@@ -39,16 +38,14 @@ def draw_board(stdscr):
         for x in range(game_data['width']):
             # Player
             if x == game_data['player']['x'] and y == game_data['player']['y']:
-                row += game_data['turtle']
-            # Eagle
-            elif x == game_data['eagle_pos']['x'] and y == game_data['eagle_pos']['y']:
-                row += game_data['eagle_icon']
+                row += game_data['mouse']
+          
             # Obstacles
             elif any(o['x'] == x and o['y'] == y for o in game_data['obstacles']):
                 row += game_data['obstacle']
             # Collectibles
             elif any(c['x'] == x and c['y'] == y and not c['collected'] for c in game_data['collectibles']):
-                row += game_data['leaf']
+                row += game_data['cheese']
             else:
                 row += game_data['empty']
         stdscr.addstr(y, 0, row, curses.color_pair(1))
