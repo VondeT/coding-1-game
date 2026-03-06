@@ -6,7 +6,7 @@
 
 # To make this work, you may have to type this into the terminal --> pip install curses
 import curses
-import random
+import 'random'
 game_data = {
     'width': 5,
     'height': 5,
@@ -57,7 +57,7 @@ def draw_board(stdscr):
                   "Move with W/A/S/D, Q to quit",
                   curses.color_pair(1))
     stdscr.refresh()
-    
+
 def move_player(key):
     x = game_data['player']['x']
     y = game_data['player']['y']
