@@ -122,9 +122,9 @@ def spawn_cheese():
         return
 import random
     # Find a random free spot that is not on the player and not on another cheese
-    while True:
-        x = random.randint(0, game_data['width'] - 1)
-        y = random.randint(0, game_data['height'] - 1)
+while True:
+    x = random.randint(0, game_data['width'] - 1)
+    y = random.randint(0, game_data['height'] - 1)
        
 
         # Avoid player's current position
