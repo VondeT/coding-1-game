@@ -78,7 +78,7 @@ def move_player(key):
     for cheese in game_data['collectibles']:
         if cheese['x'] == new_x and cheese['y'] == new_y and not cheese['collected']:
             cheese['collected'] = True
-            game_data['player']['score'] += 1
+            game_data['player']['score'] + 1
 
     # Check for obstacles
     if any(o['x'] == new_x and o['y']
