@@ -111,4 +111,41 @@ def spawn_cheese():
     if len(active_cheese) >= 4:
         return
 
+def spawn_cheese():
+    # Limit number of cheese on board
+    active_cheese = [c for c in game_data['collectibles'] if not c["collected"]]
+    if len(active_cheese) >= 4:
+        return
+
+    # Find a random free spot that is not on the player and not on another cheese
+    while True:
+        x = random.randint(1, BOARD_WIDTH - 2)
+        y = random.randint(1, BOARD_HEIGHT - 2)
+
+        # Avoid player's current position
+        if x == game_data["player_x"] and y == game_data["player_y"]:
+            continue
+
+        # Avoid overlapping other active cheese
+        occupied = any(
+            c["x"] == x and c["y"] == y and not c["collected"]
+            for c in game_data["collectibles"]
+        )
+        if not occupied:
+            break
+
+    game_data["collectibles"].append({
+        "x": x,
+        "y": y,
+        "collected": False
+    })
+
+# at start
+for _ in range(3):
+    spawn_cheese()
+
+# inside your game loop, after moves or on a timer
+spawn_cheese()
+
+
 curses.wrapper(main)
