@@ -75,8 +75,11 @@ def move_player(key):
         new_x += 1
     else:
         return  # Invalid key or move off board
-    if ['player']['x']== 'cheese' and 'player'['y'] == 'cheese':
-        return game_data['player']['score'] + 1
+    for cheese in game_data['collectibles']:
+        if cheese['x'] == new_x and cheese['y'] == new_y and not cheese['collected']:
+            cheese['collected'] = True
+            game_data['player']['score'] += 1
+
     # Check for obstacles
     if any(o['x'] == new_x and o['y']
      == new_y for o in game_data['obstacles']):
