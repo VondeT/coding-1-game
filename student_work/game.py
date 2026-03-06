@@ -128,8 +128,8 @@ while True:
        
 
         # Avoid player's current position
-        if x == game_data["player_x"] and y == game_data["player_y"]:
-            continue
+    if x == game_data["player_x"] and y == game_data["player_y"]:
+        continue
 
         # Avoid overlapping other active cheese
         occupied = any(
