@@ -76,9 +76,10 @@ def move_player(key):
     else:
         return  # Invalid key or move off board
     if ['player']['x']== 'cheese' and 'player'['y'] == 'cheese':
-        return 'player'['score'] += 1
+        return ['player']['score'] += 1
     # Check for obstacles
-    if any(o['x'] == new_x and o['y'] == new_y for o in game_data['obstacles']):
+    if any(o['x'] == new_x and o['y']
+     == new_y for o in game_data['obstacles']):
         return
 
     # Update position and increment score
