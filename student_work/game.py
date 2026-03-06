@@ -6,7 +6,7 @@
 
 # To make this work, you may have to type this into the terminal --> pip install curses
 import curses
-import 'random'
+import random
 game_data = {
     'width': 5,
     'height': 5,
@@ -123,8 +123,9 @@ def spawn_cheese():
 
     # Find a random free spot that is not on the player and not on another cheese
     while True:
-        x = random.randint(1, BOARD_WIDTH - 2)
-        y = random.randint(1, BOARD_HEIGHT - 2)
+        x = random.randint(0, game_data['width'] - 1)
+        y = random.randint(0, game_data['height'] - 1)
+       
 
         # Avoid player's current position
         if x == game_data["player_x"] and y == game_data["player_y"]:
